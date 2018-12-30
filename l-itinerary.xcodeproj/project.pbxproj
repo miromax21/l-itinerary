@@ -16,6 +16,12 @@
 		E714149021D8B0E80016CEDB /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714148F21D8B0E80016CEDB /* TripsViewController.swift */; };
 		E714149221D8B10B0016CEDB /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E714149121D8B10B0016CEDB /* TripsViewController.storyboard */; };
 		E714149421D8B9670016CEDB /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714149321D8B9670016CEDB /* TripsTableViewCell.swift */; };
+		E714149721D8BF250016CEDB /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714149621D8BF250016CEDB /* UIViewExtensions.swift */; };
+		E714149A21D8C0540016CEDB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714149921D8C0540016CEDB /* Theme.swift */; };
+		E714149C21D8C4500016CEDB /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E714149B21D8C4500016CEDB /* Roboto-Italic.ttf */; };
+		E714149E21D8C7CB0016CEDB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E714149D21D8C7CB0016CEDB /* Colors.xcassets */; };
+		E71414A021D8DACB0016CEDB /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714149F21D8DACB0016CEDB /* UIButtonExtension.swift */; };
+		E71414A221D8DC120016CEDB /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71414A121D8DC120016CEDB /* FloatingActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		E714148F21D8B0E80016CEDB /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		E714149121D8B10B0016CEDB /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 		E714149321D8B9670016CEDB /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		E714149621D8BF250016CEDB /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		E714149921D8C0540016CEDB /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E714149B21D8C4500016CEDB /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		E714149D21D8C7CB0016CEDB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E714149F21D8DACB0016CEDB /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		E71414A121D8DC120016CEDB /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,8 @@
 		E714147221D89FE80016CEDB /* l-itinerary */ = {
 			isa = PBXGroup;
 			children = (
+				E714149821D8C01D0016CEDB /* Resources */,
+				E714149521D8BEDB0016CEDB /* Extensions */,
 				E714148521D8AAF80016CEDB /* Model */,
 				E714148D21D8B09E0016CEDB /* Views */,
 				E714147321D89FE80016CEDB /* AppDelegate.swift */,
@@ -106,6 +120,26 @@
 				E714149321D8B9670016CEDB /* TripsTableViewCell.swift */,
 			);
 			path = TripViewController;
+			sourceTree = "<group>";
+		};
+		E714149521D8BEDB0016CEDB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E714149621D8BF250016CEDB /* UIViewExtensions.swift */,
+				E714149F21D8DACB0016CEDB /* UIButtonExtension.swift */,
+				E71414A121D8DC120016CEDB /* FloatingActionButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E714149821D8C01D0016CEDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E714149B21D8C4500016CEDB /* Roboto-Italic.ttf */,
+				E714149921D8C0540016CEDB /* Theme.swift */,
+				E714149D21D8C7CB0016CEDB /* Colors.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +200,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E714149E21D8C7CB0016CEDB /* Colors.xcassets in Resources */,
 				E714147E21D89FEA0016CEDB /* LaunchScreen.storyboard in Resources */,
+				E714149C21D8C4500016CEDB /* Roboto-Italic.ttf in Resources */,
 				E714149221D8B10B0016CEDB /* TripsViewController.storyboard in Resources */,
 				E714147B21D89FEA0016CEDB /* Assets.xcassets in Resources */,
 			);
@@ -180,9 +216,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E714149421D8B9670016CEDB /* TripsTableViewCell.swift in Sources */,
+				E714149A21D8C0540016CEDB /* Theme.swift in Sources */,
+				E714149721D8BF250016CEDB /* UIViewExtensions.swift in Sources */,
 				E714148821D8AB580016CEDB /* TripModel.swift in Sources */,
 				E714147421D89FE80016CEDB /* AppDelegate.swift in Sources */,
+				E71414A021D8DACB0016CEDB /* UIButtonExtension.swift in Sources */,
 				E714148A21D8AB6A0016CEDB /* TripFunctions.swift in Sources */,
+				E71414A221D8DC120016CEDB /* FloatingActionButton.swift in Sources */,
 				E714148C21D8AC8C0016CEDB /* Data.swift in Sources */,
 				E714149021D8B0E80016CEDB /* TripsViewController.swift in Sources */,
 			);
