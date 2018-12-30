@@ -10,7 +10,6 @@ import UIKit
 
 class AddTripViewController: UIViewController {
 
-    @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var tripTextField: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
@@ -18,9 +17,7 @@ class AddTripViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        popupView.addShadowAndRounderCorners()
-        popupView.backgroundColor = Theme.backgroundColor
+        titleLable.font = UIFont(name: Theme.mainFontName, size: 26)
 
     }
     @IBAction func cancel(_ sender: UIButton) {
