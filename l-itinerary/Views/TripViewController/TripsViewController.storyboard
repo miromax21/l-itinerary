@@ -57,7 +57,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="plus"/>
                                 <connections>
-                                    <segue destination="eVb-qb-ebz" kind="presentation" id="bxW-72-W1a"/>
+                                    <segue destination="eVb-qb-ebz" kind="presentation" identifier="toAddTripSeque" id="bxW-72-W1a"/>
                                 </connections>
                             </button>
                         </subviews>

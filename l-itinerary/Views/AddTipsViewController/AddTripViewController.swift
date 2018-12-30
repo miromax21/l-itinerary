@@ -15,6 +15,8 @@ class AddTripViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
+    var doneSaving : (()-> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLable.font = UIFont(name: Theme.mainFontName, size: 26)
@@ -24,6 +26,10 @@ class AddTripViewController: UIViewController {
         dismiss(animated: true)
     }
     @IBAction func save(_ sender: UIButton) {
+        TripFunctions.createTrip(tripModel: TripModel(title: tripTextField.text!))
+        if let doneSaving = doneSaving{
+            doneSaving()
+        } 
         dismiss(animated: true)
     }
     
