@@ -15,6 +15,7 @@
 		E714148C21D8AC8C0016CEDB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714148B21D8AC8C0016CEDB /* Data.swift */; };
 		E714149021D8B0E80016CEDB /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714148F21D8B0E80016CEDB /* TripsViewController.swift */; };
 		E714149221D8B10B0016CEDB /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E714149121D8B10B0016CEDB /* TripsViewController.storyboard */; };
+		E714149421D8B9670016CEDB /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714149321D8B9670016CEDB /* TripsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E714148B21D8AC8C0016CEDB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E714148F21D8B0E80016CEDB /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		E714149121D8B10B0016CEDB /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
+		E714149321D8B9670016CEDB /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				E714149121D8B10B0016CEDB /* TripsViewController.storyboard */,
 				E714148F21D8B0E80016CEDB /* TripsViewController.swift */,
+				E714149321D8B9670016CEDB /* TripsTableViewCell.swift */,
 			);
 			path = TripViewController;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E714149421D8B9670016CEDB /* TripsTableViewCell.swift in Sources */,
 				E714148821D8AB580016CEDB /* TripModel.swift in Sources */,
 				E714147421D89FE80016CEDB /* AppDelegate.swift in Sources */,
 				E714148A21D8AB6A0016CEDB /* TripFunctions.swift in Sources */,
