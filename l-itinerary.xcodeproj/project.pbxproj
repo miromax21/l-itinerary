@@ -22,6 +22,8 @@
 		E714149E21D8C7CB0016CEDB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E714149D21D8C7CB0016CEDB /* Colors.xcassets */; };
 		E71414A021D8DACB0016CEDB /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714149F21D8DACB0016CEDB /* UIButtonExtension.swift */; };
 		E71414A221D8DC120016CEDB /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71414A121D8DC120016CEDB /* FloatingActionButton.swift */; };
+		E71414A421D8DEF60016CEDB /* AddTripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71414A321D8DEF60016CEDB /* AddTripsViewController.storyboard */; };
+		E71414A721D8DF370016CEDB /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71414A621D8DF370016CEDB /* AddTripViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		E714149D21D8C7CB0016CEDB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E714149F21D8DACB0016CEDB /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		E71414A121D8DC120016CEDB /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
+		E71414A321D8DEF60016CEDB /* AddTripsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripsViewController.storyboard; sourceTree = "<group>"; };
+		E71414A621D8DF370016CEDB /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		E714148D21D8B09E0016CEDB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E71414A521D8DF040016CEDB /* AddTipsViewController */,
 				E714148E21D8B0AB0016CEDB /* TripViewController */,
 			);
 			path = Views;
@@ -140,6 +145,15 @@
 				E714149D21D8C7CB0016CEDB /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E71414A521D8DF040016CEDB /* AddTipsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E71414A321D8DEF60016CEDB /* AddTripsViewController.storyboard */,
+				E71414A621D8DF370016CEDB /* AddTripViewController.swift */,
+			);
+			path = AddTipsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +216,7 @@
 			files = (
 				E714149E21D8C7CB0016CEDB /* Colors.xcassets in Resources */,
 				E714147E21D89FEA0016CEDB /* LaunchScreen.storyboard in Resources */,
+				E71414A421D8DEF60016CEDB /* AddTripsViewController.storyboard in Resources */,
 				E714149C21D8C4500016CEDB /* Roboto-Italic.ttf in Resources */,
 				E714149221D8B10B0016CEDB /* TripsViewController.storyboard in Resources */,
 				E714147B21D89FEA0016CEDB /* Assets.xcassets in Resources */,
@@ -222,6 +237,7 @@
 				E714147421D89FE80016CEDB /* AppDelegate.swift in Sources */,
 				E71414A021D8DACB0016CEDB /* UIButtonExtension.swift in Sources */,
 				E714148A21D8AB6A0016CEDB /* TripFunctions.swift in Sources */,
+				E71414A721D8DF370016CEDB /* AddTripViewController.swift in Sources */,
 				E71414A221D8DC120016CEDB /* FloatingActionButton.swift in Sources */,
 				E714148C21D8AC8C0016CEDB /* Data.swift in Sources */,
 				E714149021D8B0E80016CEDB /* TripsViewController.swift in Sources */,

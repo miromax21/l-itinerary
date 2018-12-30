@@ -56,6 +56,9 @@
                                 <rect key="frame" x="306" y="597" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="plus"/>
+                                <connections>
+                                    <segue destination="eVb-qb-ebz" kind="presentation" id="bxW-72-W1a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,12 +72,20 @@
                     </view>
                     <connections>
                         <outlet property="TableView" destination="snA-e8-Tyc" id="sW5-ra-AU0"/>
-                        <outlet property="addButton" destination="Vzp-Fi-lgx" id="Vvk-7p-aRp"/>
+                        <outlet property="addButton" destination="0hU-p5-Fb2" id="oya-8b-ea3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJx-gS-lsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-76" y="130.88455772113943"/>
+        </scene>
+        <!--AddTripsViewController-->
+        <scene sceneID="Cwh-RC-VKp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTripsViewController" id="eVb-qb-ebz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LGT-MK-nTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="131"/>
         </scene>
     </scenes>
     <resources>

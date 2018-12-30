@@ -10,6 +10,6 @@ import UIKit
 class Theme {
     static let mainFontName = "Roboto-Italic"
     static let accent = UIColor(named: "Accent")
-    static let Background = UIColor(named: "Background")
+    static let backgroundColor = UIColor(named: "Background")
     static let Tint = UIColor(named: "Tint")
 }
