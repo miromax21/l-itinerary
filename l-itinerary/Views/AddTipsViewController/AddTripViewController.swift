@@ -55,7 +55,7 @@ class AddTripViewController: UIViewController {
           //  tripTextField.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
             return
         }
-        TripFunctions.createTrip(tripModel: TripModel(title: tripTextField.text!))
+        TripFunctions.createTrip(tripModel: TripModel(title: tripTextField.text!, image : imageView.image ))
         if let doneSaving = doneSaving{
             doneSaving()
         } 
