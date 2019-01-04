@@ -15,13 +15,22 @@ class AddTripViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var cameraButton: UIButton!
     
     var doneSaving : (()-> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLable.font = UIFont(name: Theme.mainFontName, size: 26)
         imageView.layer.cornerRadius = 10
+        cameraButton.setImage(UIImage(named: "camera"), for: .normal)
+        titleLable.font = UIFont(name: Theme.mainFontName, size: 26)
+        
+        titleLable.layer.shadowOpacity = 1
+        titleLable.layer.shadowColor = UIColor.white.cgColor
+        titleLable.layer.shadowOffset = CGSize.zero
+        titleLable.layer.shadowRadius = 5
+ 
+        
 
     }
     @IBAction func cancel(_ sender: UIButton) {
@@ -53,23 +62,40 @@ class AddTripViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    fileprivate func presentPhotoPickerController() {
+        let myPickerController = UIImagePickerController()
+        myPickerController.delegate = self
+        myPickerController.sourceType = .photoLibrary
+        self.present(myPickerController, animated: true)
+    }
+    
     @IBAction func addPhoto(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
             PHPhotoLibrary.requestAuthorization{ (status) in
                 switch status{
                 case .authorized:
-                    let myPickerController = UIImagePickerController()
-                    myPickerController.delegate = self
-                    myPickerController.sourceType = .photoLibrary
-                    self.present(myPickerController, animated: true)
-                default:
-                    break
-//                case .notDetermined:
-//                    <#code#>
-//                case .restricted:
-//                    <#code#>
-//                case .denied:
-//                    <#code#>
+                    self.presentPhotoPickerController()
+                case .notDetermined:
+                    if status == PHAuthorizationStatus.authorized {
+                        self.presentPhotoPickerController()
+                    }
+                case .restricted:
+                    let alert = UIAlertController(title: "Photo library restricted", message: "Photo library restricted and cannot be accesed", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default)
+                    alert.addAction(okAction)
+                    self.present(alert,animated: true)
+                case .denied:
+                    let alert = UIAlertController(title: "Photo library denied", message: "Photo library denied", preferredStyle: .alert)
+                    let gotoSettingsAction = UIAlertAction(title: "Go to Settings", style: .default){ (action) in
+                        DispatchQueue.main.async {
+                            let url = URL(string: UIApplication.openSettingsURLString)!
+                            UIApplication.shared.open(url, options: [:])
+                        }
+                    }
+                    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+                    alert.addAction(cancelAction)
+                    alert.addAction(gotoSettingsAction)
+                    self.present(alert,animated: true)
                 }
             }
         }
@@ -84,7 +110,7 @@ extension AddTripViewController: UIImagePickerControllerDelegate,UINavigationCon
         }
         dismiss(animated: true)
     }
-//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//       
-//    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
+    }
 }
