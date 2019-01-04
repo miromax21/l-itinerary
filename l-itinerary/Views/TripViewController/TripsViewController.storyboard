@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ydv-Vh-wmI">
-                                                    <rect key="frame" x="16" y="11" width="346" height="130"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="130"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vez-es-8E9">
@@ -72,7 +72,7 @@
                     </view>
                     <connections>
                         <outlet property="TableView" destination="snA-e8-Tyc" id="sW5-ra-AU0"/>
-                        <outlet property="addButton" destination="0hU-p5-Fb2" id="oya-8b-ea3"/>
+                        <outlet property="addButton" destination="0hU-p5-Fb2" id="jTn-It-iLm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJx-gS-lsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
