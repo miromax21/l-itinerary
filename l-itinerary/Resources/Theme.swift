@@ -13,4 +13,5 @@ class Theme {
     static let backgroundColor = UIColor(named: "Background")
     static let tintColor = UIColor(named: "Tint")
     static let alert = UIImage(cgImage: "alert" as! CGImage)
+    static let blueColor = UIColor(named: "Blue")
 }

@@ -18,6 +18,7 @@ class AddTripViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIButton!
     
     var doneSaving : (()-> ())?
+    var tripIndexToEdit: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,11 @@ class AddTripViewController: UIViewController {
         titleLable.layer.shadowOffset = CGSize.zero
         titleLable.layer.shadowRadius = 5
  
-        
+        if let index = tripIndexToEdit{
+            let trip = Data.tripModels[index]
+            tripTextField.text = trip.title
+            imageView.image = trip.image
+        }
 
     }
     @IBAction func cancel(_ sender: UIButton) {
@@ -38,7 +43,7 @@ class AddTripViewController: UIViewController {
     }
     @IBAction func save(_ sender: UIButton) {
         tripTextField.rightViewMode = .never
-        guard tripTextField.text != "", let _ = tripTextField.text else {
+        guard tripTextField.text != "", let newTripName = tripTextField.text else {
 //            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
 //            imageView.image = #imageLiteral(resourceName: "alert")
 //            imageView.contentMode = .scaleAspectFit
@@ -55,7 +60,11 @@ class AddTripViewController: UIViewController {
           //  tripTextField.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
             return
         }
-        TripFunctions.createTrip(tripModel: TripModel(title: tripTextField.text!, image : imageView.image ))
+        if let index = tripIndexToEdit{
+            TripFunctions.updateTrip(index: index, title: newTripName, image: imageView.image)
+        } else {
+            TripFunctions.createTrip(tripModel: TripModel(title: tripTextField.text!, image : imageView.image ))
+        }
         if let doneSaving = doneSaving{
             doneSaving()
         } 
@@ -70,7 +79,7 @@ class AddTripViewController: UIViewController {
     }
     
     @IBAction func addPhoto(_ sender: UIButton) {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+        //if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
             PHPhotoLibrary.requestAuthorization{ (status) in
                 switch status{
                 case .authorized:
@@ -98,7 +107,7 @@ class AddTripViewController: UIViewController {
                     self.present(alert,animated: true)
                 }
             }
-        }
+        //}
     }
 }
 

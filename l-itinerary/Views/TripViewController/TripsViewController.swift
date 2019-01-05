@@ -14,7 +14,7 @@ class TripsViewController: UIViewController {
   //  @IBOutlet var addButton: FloatingActionButton!
     @IBOutlet weak var addButton: FloatingActionButton!
     // @IBOutlet weak var addButton: FloatingActionButton!
-    
+    var tripIndexToEdit: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         TableView.dataSource = self
@@ -29,6 +29,7 @@ class TripsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddTripSeque" {
             let popup = segue.destination as! AddTripViewController
+            popup.tripIndexToEdit = self.tripIndexToEdit
             popup.doneSaving = { [weak self] in
                 self?.TableView.reloadData()
             }
@@ -69,5 +70,16 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate{
         delete.backgroundColor = Theme.tintColor
         // delete.image = UIImage(named: "Delete")
         return UISwipeActionsConfiguration(actions: [delete])
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: (Bool) -> ()) in
+            
+            self.tripIndexToEdit = indexPath.row
+            self.performSegue(withIdentifier: "toAddTripSeque", sender: nil)
+            actionPerformed(true)
+        }
+        edit.backgroundColor = Theme.blueColor
+        return UISwipeActionsConfiguration(actions: [edit])
     }
 }
