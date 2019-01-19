@@ -28,6 +28,7 @@
 		E71414AC21D8E6450016CEDB /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71414AB21D8E6450016CEDB /* AppButton.swift */; };
 		E73F421B21F2F40F00ECF3BD /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F421A21F2F40F00ECF3BD /* MockData.swift */; };
 		E74F540B21F32C2300483DEF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74F540A21F32C2300483DEF /* HeaderTableViewCell.swift */; };
+		E74F540D21F3399800483DEF /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74F540C21F3399800483DEF /* ActivityTableViewCell.swift */; };
 		E78DB14221EB6F4B00FC4731 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB14121EB6F4B00FC4731 /* DayModel.swift */; };
 		E78DB14721EB710900FC4731 /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB14621EB710900FC4731 /* ActivityTypeEnum.swift */; };
 		E78DB14A21EB755200FC4731 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB14921EB755200FC4731 /* ActivitiesViewController.swift */; };
@@ -60,6 +61,7 @@
 		E71414AB21D8E6450016CEDB /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		E73F421A21F2F40F00ECF3BD /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		E74F540A21F32C2300483DEF /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		E74F540C21F3399800483DEF /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		E78DB14121EB6F4B00FC4731 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		E78DB14621EB710900FC4731 /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
 		E78DB14921EB755200FC4731 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				E78DB14B21EB79FD00FC4731 /* ActivitiesViewController.storyboard */,
 				E78DB14921EB755200FC4731 /* ActivitiesViewController.swift */,
 				E74F540A21F32C2300483DEF /* HeaderTableViewCell.swift */,
+				E74F540C21F3399800483DEF /* ActivityTableViewCell.swift */,
 			);
 			path = ActivitiesViewController;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				E73F421B21F2F40F00ECF3BD /* MockData.swift in Sources */,
 				E78DB14F21EB7CD500FC4731 /* ActivityTypeEnum.swift in Sources */,
 				E714147421D89FE80016CEDB /* AppDelegate.swift in Sources */,
+				E74F540D21F3399800483DEF /* ActivityTableViewCell.swift in Sources */,
 				E71414AA21D8E4CB0016CEDB /* PopupUIView.swift in Sources */,
 				E71414A021D8DACB0016CEDB /* UIButtonExtension.swift in Sources */,
 				E714148A21D8AB6A0016CEDB /* TripFunctions.swift in Sources */,

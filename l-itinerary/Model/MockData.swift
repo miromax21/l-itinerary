@@ -11,9 +11,9 @@ class MockData{
     static func createMockTripModelData() -> [TripModel]{
         var mockTrips = [TripModel]()
         
-        mockTrips.append(TripModel(title: "Trip 1", image: #imageLiteral(resourceName: "alert"), dayModels: createmockDayModeldata()))
-        mockTrips.append(TripModel(title: "Trip 2", image: #imageLiteral(resourceName: "alert"), dayModels: createmockDayModeldata()))
-        mockTrips.append(TripModel(title: "Trip 3", image: #imageLiteral(resourceName: "alert"), dayModels: createmockDayModeldata()))
+        mockTrips.append(TripModel(title: "Trip 1", image: #imageLiteral(resourceName: "Aerial04"), dayModels: createmockDayModeldata()))
+        mockTrips.append(TripModel(title: "Trip 2", image: #imageLiteral(resourceName: "backgroundScreen"), dayModels: createmockDayModeldata()))
+        mockTrips.append(TripModel(title: "Trip 3", image: #imageLiteral(resourceName: "Aerial02"), dayModels: createmockDayModeldata()))
         
         return mockTrips
     }
