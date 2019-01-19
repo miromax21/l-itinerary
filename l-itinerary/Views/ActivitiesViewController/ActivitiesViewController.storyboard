@@ -20,11 +20,29 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XHn-hv-Aag">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-Mt-ldL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="irV-0j-XzJ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="irV-0j-XzJ" id="YBW-vx-W7Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mWQ-Mt-ldL" firstAttribute="leading" secondItem="rFd-fv-80o" secondAttribute="leading" id="DLQ-Bx-aNx"/>
+                            <constraint firstItem="mWQ-Mt-ldL" firstAttribute="bottom" secondItem="rFd-fv-80o" secondAttribute="bottom" id="EZF-T5-Gej"/>
                             <constraint firstItem="rFd-fv-80o" firstAttribute="trailing" secondItem="XHn-hv-Aag" secondAttribute="trailing" id="Suu-be-fet"/>
                             <constraint firstItem="XHn-hv-Aag" firstAttribute="top" secondItem="NqA-F3-6mF" secondAttribute="top" constant="20" id="WIs-Fw-dm0"/>
+                            <constraint firstItem="mWQ-Mt-ldL" firstAttribute="trailing" secondItem="rFd-fv-80o" secondAttribute="trailing" id="gSf-ZB-8ai"/>
+                            <constraint firstItem="mWQ-Mt-ldL" firstAttribute="top" secondItem="rFd-fv-80o" secondAttribute="top" id="nCn-e1-CW0"/>
                             <constraint firstItem="rFd-fv-80o" firstAttribute="bottom" secondItem="XHn-hv-Aag" secondAttribute="bottom" id="qQE-zn-urx"/>
                             <constraint firstItem="XHn-hv-Aag" firstAttribute="leading" secondItem="NqA-F3-6mF" secondAttribute="leading" id="uPX-pe-jv9"/>
                         </constraints>
@@ -32,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="XHn-hv-Aag" id="RhT-Dq-RHj"/>
+                        <outlet property="tableView" destination="mWQ-Mt-ldL" id="jMh-me-g2G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUj-3s-z1u" userLabel="First Responder" sceneMemberID="firstResponder"/>

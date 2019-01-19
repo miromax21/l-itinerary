@@ -11,7 +11,7 @@ struct DayModel {
     var id: String!
     var title = ""
     var subtitle = ""
-    var activityModel = [ActivityModel]()
+    var activityModels = [ActivityModel]()
     
     init(title:String, subtitle:String, data:[ActivityModel]? ) {
         id = UUID().uuidString
@@ -19,7 +19,7 @@ struct DayModel {
         self.subtitle = subtitle
         
         if let data = data{
-            self.activityModel = data
+            self.activityModels = data
         }
     }
     
