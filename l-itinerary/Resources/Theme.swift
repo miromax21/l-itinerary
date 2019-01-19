@@ -12,6 +12,7 @@ class Theme {
     static let accent = UIColor(named: "Accent")
     static let backgroundColor = UIColor(named: "Background")
     static let tintColor = UIColor(named: "Tint")
-    static let alert = UIImage(cgImage: "alert" as! CGImage)
+    static let alert = UIImage(named: "alert")
+    static let editImg = UIImage(named: "edit")
     static let blueColor = UIColor(named: "Blue")
 }

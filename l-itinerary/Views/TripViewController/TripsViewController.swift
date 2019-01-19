@@ -106,4 +106,12 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate{
         edit.backgroundColor = Theme.blueColor
         return UISwipeActionsConfiguration(actions: [edit])
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! ActivitiesViewController
+        let trip = Data.tripModels[indexPath.row]
+        vc.tripId = trip.id
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

@@ -25,6 +25,17 @@ class TripFunctions {
             completion()
         }
     }
+    
+    static func readTrip(by id:UUID, completion: @escaping (TripModel?) -> ()){
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            let trip = Data.tripModels.first(where: {$0.id == id})
+            DispatchQueue.main.async {
+                completion(trip)
+            }
+        }
+    }
+    
     static func updateTrip(index:Int,title:String, image: UIImage? = nil){
         Data.tripModels[index].title = title
         Data.tripModels[index].image = image

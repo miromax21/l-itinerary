@@ -26,6 +26,13 @@
 		E71414A721D8DF370016CEDB /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71414A621D8DF370016CEDB /* AddTripViewController.swift */; };
 		E71414AA21D8E4CB0016CEDB /* PopupUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71414A921D8E4CB0016CEDB /* PopupUIView.swift */; };
 		E71414AC21D8E6450016CEDB /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71414AB21D8E6450016CEDB /* AppButton.swift */; };
+		E73F421B21F2F40F00ECF3BD /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F421A21F2F40F00ECF3BD /* MockData.swift */; };
+		E78DB14221EB6F4B00FC4731 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB14121EB6F4B00FC4731 /* DayModel.swift */; };
+		E78DB14721EB710900FC4731 /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB14621EB710900FC4731 /* ActivityTypeEnum.swift */; };
+		E78DB14A21EB755200FC4731 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB14921EB755200FC4731 /* ActivitiesViewController.swift */; };
+		E78DB14C21EB79FD00FC4731 /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78DB14B21EB79FD00FC4731 /* ActivitiesViewController.storyboard */; };
+		E78DB14F21EB7CD500FC4731 /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB14E21EB7CD500FC4731 /* ActivityTypeEnum.swift */; };
+		E78DB15121EB7D1D00FC4731 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB15021EB7D1D00FC4731 /* ActivityModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +57,13 @@
 		E71414A621D8DF370016CEDB /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		E71414A921D8E4CB0016CEDB /* PopupUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUIView.swift; sourceTree = "<group>"; };
 		E71414AB21D8E6450016CEDB /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		E73F421A21F2F40F00ECF3BD /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		E78DB14121EB6F4B00FC4731 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		E78DB14621EB710900FC4731 /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
+		E78DB14921EB755200FC4731 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		E78DB14B21EB79FD00FC4731 /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
+		E78DB14E21EB7CD500FC4731 /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
+		E78DB15021EB7D1D00FC4731 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				E714148B21D8AC8C0016CEDB /* Data.swift */,
+				E73F421A21F2F40F00ECF3BD /* MockData.swift */,
 				E714148621D8AB280016CEDB /* Trip */,
+				E78DB14021EB6F3300FC4731 /* Day */,
+				E78DB14321EB701B00FC4731 /* Activity */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +133,7 @@
 			children = (
 				E71414A521D8DF040016CEDB /* AddTipsViewController */,
 				E714148E21D8B0AB0016CEDB /* TripViewController */,
+				E78DB14821EB74FE00FC4731 /* ActivitiesViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +186,41 @@
 				E71414AB21D8E6450016CEDB /* AppButton.swift */,
 			);
 			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		E78DB14021EB6F3300FC4731 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				E78DB14121EB6F4B00FC4731 /* DayModel.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		E78DB14321EB701B00FC4731 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				E78DB14D21EB7CD500FC4731 /* Activity */,
+				E78DB14621EB710900FC4731 /* ActivityTypeEnum.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		E78DB14821EB74FE00FC4731 /* ActivitiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E78DB14B21EB79FD00FC4731 /* ActivitiesViewController.storyboard */,
+				E78DB14921EB755200FC4731 /* ActivitiesViewController.swift */,
+			);
+			path = ActivitiesViewController;
+			sourceTree = "<group>";
+		};
+		E78DB14D21EB7CD500FC4731 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				E78DB15021EB7D1D00FC4731 /* ActivityModel.swift */,
+				E78DB14E21EB7CD500FC4731 /* ActivityTypeEnum.swift */,
+			);
+			name = Activity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +290,7 @@
 				E714149C21D8C4500016CEDB /* Roboto-Italic.ttf in Resources */,
 				E714149221D8B10B0016CEDB /* TripsViewController.storyboard in Resources */,
 				E714147B21D89FEA0016CEDB /* Assets.xcassets in Resources */,
+				E78DB14C21EB79FD00FC4731 /* ActivitiesViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +303,14 @@
 			files = (
 				E714149421D8B9670016CEDB /* TripsTableViewCell.swift in Sources */,
 				E714149A21D8C0540016CEDB /* Theme.swift in Sources */,
+				E78DB15121EB7D1D00FC4731 /* ActivityModel.swift in Sources */,
+				E78DB14221EB6F4B00FC4731 /* DayModel.swift in Sources */,
 				E714149721D8BF250016CEDB /* UIViewExtensions.swift in Sources */,
 				E714148821D8AB580016CEDB /* TripModel.swift in Sources */,
+				E78DB14A21EB755200FC4731 /* ActivitiesViewController.swift in Sources */,
+				E78DB14721EB710900FC4731 /* ActivityTypeEnum.swift in Sources */,
+				E73F421B21F2F40F00ECF3BD /* MockData.swift in Sources */,
+				E78DB14F21EB7CD500FC4731 /* ActivityTypeEnum.swift in Sources */,
 				E714147421D89FE80016CEDB /* AppDelegate.swift in Sources */,
 				E71414AA21D8E4CB0016CEDB /* PopupUIView.swift in Sources */,
 				E71414A021D8DACB0016CEDB /* UIButtonExtension.swift in Sources */,
@@ -406,6 +466,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "swift.l-itinerary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -424,6 +485,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "swift.l-itinerary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
