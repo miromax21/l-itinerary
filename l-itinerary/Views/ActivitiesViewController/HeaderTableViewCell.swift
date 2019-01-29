@@ -19,7 +19,7 @@ class HeaderTableViewCell: UITableViewCell {
 
     func setup(model: DayModel) {
         titleLable.text = model.title
-       // subTitleLable.text? = model.subtitle
+        subTitleLable.text? = model.subtitle
     }
 
 }

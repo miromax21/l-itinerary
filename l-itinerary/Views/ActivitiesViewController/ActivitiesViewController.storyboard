@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kuh-dn-Te6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kuh-dn-Te6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -126,7 +126,7 @@
                                         <connections>
                                             <outlet property="activityImageView" destination="0sG-OQ-EWg" id="1IE-Ak-8uX"/>
                                             <outlet property="cardView" destination="BZE-fd-Re3" id="4xa-Eg-uIT"/>
-                                            <outlet property="subtitleLable" destination="0sG-OQ-EWg" id="BQS-OH-pul"/>
+                                            <outlet property="subtitleLable" destination="5Fh-Oz-sAQ" id="Csb-F4-dvu"/>
                                             <outlet property="titleLable" destination="1QP-Lq-IW4" id="Kxx-yV-QTU"/>
                                         </connections>
                                     </tableViewCell>
