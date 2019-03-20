@@ -12,13 +12,17 @@ class HeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var subTitleLable: UILabel!
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
     func setup(model: DayModel) {
-        titleLable.text = model.title
+        let formater = DateFormatter()
+        formater.dateStyle = .medium
+        titleLable.text = formater.string(from: model.title)
         subTitleLable.text? = model.subtitle
     }
 

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bKq-ar-JbS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Day View Controller-->
+        <scene sceneID="U3h-Y6-3eh">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="bKq-ar-JbS" customClass="AddDayViewController" customModule="l_itinerary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5PZ-5X-w59">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-iL-P4L" customClass="PopupUIView" customModule="l_itinerary" customModuleProvider="target">
+                                <rect key="frame" x="14" y="100" width="345" height="259"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gw5-bq-K2u">
+                                        <rect key="frame" x="8" y="8" width="329" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpx-Gw-CNn" customClass="AppButton" customModule="l_itinerary" customModuleProvider="target">
+                                        <rect key="frame" x="246" y="221" width="91" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="save:" destination="bKq-ar-JbS" eventType="touchUpInside" id="VGw-BQ-Asq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSs-pD-RXN" customClass="AppButton" customModule="l_itinerary" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="221" width="74" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="bKq-ar-JbS" eventType="touchUpInside" id="v8S-Q6-hf4"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DmV-1T-bVb">
+                                        <rect key="frame" x="8" y="43" width="329" height="116"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="574800648.72096598">
+                                            <!--2019-03-20 18:50:48 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cU4-sS-eGb" customClass="A">
+                                        <rect key="frame" x="8" y="167" width="329" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="Accent"/>
+                        <constraints>
+                            <constraint firstItem="1Z3-iL-P4L" firstAttribute="top" secondItem="3pb-1y-7dO" secondAttribute="top" constant="80" id="Bkc-FL-Z9F"/>
+                            <constraint firstItem="1Z3-iL-P4L" firstAttribute="trailing" secondItem="5PZ-5X-w59" secondAttribute="trailingMargin" id="ZYL-hN-2Lo"/>
+                            <constraint firstItem="1Z3-iL-P4L" firstAttribute="leading" secondItem="3pb-1y-7dO" secondAttribute="leading" constant="14" id="cKF-NY-VVI"/>
+                            <constraint firstItem="3pb-1y-7dO" firstAttribute="bottom" secondItem="1Z3-iL-P4L" secondAttribute="bottom" constant="308" id="wQN-CY-N0u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3pb-1y-7dO"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="fSs-pD-RXN" id="Q6Y-Nc-NXM"/>
+                        <outlet property="datePicker" destination="DmV-1T-bVb" id="evc-E8-l02"/>
+                        <outlet property="saveButton" destination="Xpx-Gw-CNn" id="dkB-qp-68W"/>
+                        <outlet property="subtittleTextField" destination="cU4-sS-eGb" id="ie9-Vb-Gr3"/>
+                        <outlet property="titleLable" destination="gw5-bq-K2u" id="l91-EF-8nL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jjL-OQ-erp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47.200000000000003" y="60.719640179910051"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Accent">
+            <color red="0.0" green="0.15999999642372131" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

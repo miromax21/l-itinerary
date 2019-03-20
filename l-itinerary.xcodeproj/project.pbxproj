@@ -29,12 +29,18 @@
 		E73F421B21F2F40F00ECF3BD /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73F421A21F2F40F00ECF3BD /* MockData.swift */; };
 		E74F540B21F32C2300483DEF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74F540A21F32C2300483DEF /* HeaderTableViewCell.swift */; };
 		E74F540D21F3399800483DEF /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74F540C21F3399800483DEF /* ActivityTableViewCell.swift */; };
+		E76AE9CE2242C02300DD45DF /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76AE9CD2242C02300DD45DF /* DateExtensions.swift */; };
 		E78DB14221EB6F4B00FC4731 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB14121EB6F4B00FC4731 /* DayModel.swift */; };
 		E78DB14721EB710900FC4731 /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB14621EB710900FC4731 /* ActivityTypeEnum.swift */; };
 		E78DB14A21EB755200FC4731 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB14921EB755200FC4731 /* ActivitiesViewController.swift */; };
 		E78DB14C21EB79FD00FC4731 /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78DB14B21EB79FD00FC4731 /* ActivitiesViewController.storyboard */; };
-		E78DB14F21EB7CD500FC4731 /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB14E21EB7CD500FC4731 /* ActivityTypeEnum.swift */; };
 		E78DB15121EB7D1D00FC4731 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DB15021EB7D1D00FC4731 /* ActivityModel.swift */; };
+		E79021B52241390E00D18B63 /* UItableViewEctention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79021B42241390E00D18B63 /* UItableViewEctention.swift */; };
+		E79021B8224140F100D18B63 /* AddDayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79021B7224140F100D18B63 /* AddDayViewController.storyboard */; };
+		E79021BA2241410A00D18B63 /* AddDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79021B92241410A00D18B63 /* AddDayViewController.swift */; };
+		E79021BC224146AD00D18B63 /* UIViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79021BB224146AD00D18B63 /* UIViewControllerExtention.swift */; };
+		E79021BE2241473900D18B63 /* UITextFieldExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79021BD2241473900D18B63 /* UITextFieldExtention.swift */; };
+		E79021C02241494F00D18B63 /* DayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79021BF2241494F00D18B63 /* DayFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,12 +68,19 @@
 		E73F421A21F2F40F00ECF3BD /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		E74F540A21F32C2300483DEF /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E74F540C21F3399800483DEF /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		E76AE9CD2242C02300DD45DF /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		E78DB14121EB6F4B00FC4731 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		E78DB14621EB710900FC4731 /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
 		E78DB14921EB755200FC4731 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		E78DB14B21EB79FD00FC4731 /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
 		E78DB14E21EB7CD500FC4731 /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
 		E78DB15021EB7D1D00FC4731 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		E79021B42241390E00D18B63 /* UItableViewEctention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UItableViewEctention.swift; sourceTree = "<group>"; };
+		E79021B7224140F100D18B63 /* AddDayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDayViewController.storyboard; sourceTree = "<group>"; };
+		E79021B92241410A00D18B63 /* AddDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayViewController.swift; sourceTree = "<group>"; };
+		E79021BB224146AD00D18B63 /* UIViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtention.swift; sourceTree = "<group>"; };
+		E79021BD2241473900D18B63 /* UITextFieldExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtention.swift; sourceTree = "<group>"; };
+		E79021BF2241494F00D18B63 /* DayFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +148,7 @@
 		E714148D21D8B09E0016CEDB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E79021B62241407100D18B63 /* AddDayViewController */,
 				E71414A521D8DF040016CEDB /* AddTipsViewController */,
 				E714148E21D8B0AB0016CEDB /* TripViewController */,
 				E78DB14821EB74FE00FC4731 /* ActivitiesViewController */,
@@ -158,6 +172,10 @@
 				E714149621D8BF250016CEDB /* UIViewExtensions.swift */,
 				E714149F21D8DACB0016CEDB /* UIButtonExtension.swift */,
 				E71414A121D8DC120016CEDB /* FloatingActionButton.swift */,
+				E79021B42241390E00D18B63 /* UItableViewEctention.swift */,
+				E79021BB224146AD00D18B63 /* UIViewControllerExtention.swift */,
+				E79021BD2241473900D18B63 /* UITextFieldExtention.swift */,
+				E76AE9CD2242C02300DD45DF /* DateExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				E78DB14121EB6F4B00FC4731 /* DayModel.swift */,
+				E79021BF2241494F00D18B63 /* DayFunctions.swift */,
 			);
 			path = Day;
 			sourceTree = "<group>";
@@ -229,6 +248,15 @@
 			name = Activity;
 			sourceTree = "<group>";
 		};
+		E79021B62241407100D18B63 /* AddDayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E79021B7224140F100D18B63 /* AddDayViewController.storyboard */,
+				E79021B92241410A00D18B63 /* AddDayViewController.swift */,
+			);
+			path = AddDayViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -259,7 +287,7 @@
 					New,
 				);
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Princess Max";
 				TargetAttributes = {
 					E714146F21D89FE80016CEDB = {
@@ -294,6 +322,7 @@
 				E714147E21D89FEA0016CEDB /* LaunchScreen.storyboard in Resources */,
 				E71414A421D8DEF60016CEDB /* AddTripsViewController.storyboard in Resources */,
 				E714149C21D8C4500016CEDB /* Roboto-Italic.ttf in Resources */,
+				E79021B8224140F100D18B63 /* AddDayViewController.storyboard in Resources */,
 				E714149221D8B10B0016CEDB /* TripsViewController.storyboard in Resources */,
 				E714147B21D89FEA0016CEDB /* Assets.xcassets in Resources */,
 				E78DB14C21EB79FD00FC4731 /* ActivitiesViewController.storyboard in Resources */,
@@ -311,23 +340,28 @@
 				E714149A21D8C0540016CEDB /* Theme.swift in Sources */,
 				E78DB15121EB7D1D00FC4731 /* ActivityModel.swift in Sources */,
 				E78DB14221EB6F4B00FC4731 /* DayModel.swift in Sources */,
+				E79021C02241494F00D18B63 /* DayFunctions.swift in Sources */,
+				E79021BE2241473900D18B63 /* UITextFieldExtention.swift in Sources */,
+				E79021BA2241410A00D18B63 /* AddDayViewController.swift in Sources */,
+				E79021BC224146AD00D18B63 /* UIViewControllerExtention.swift in Sources */,
 				E714149721D8BF250016CEDB /* UIViewExtensions.swift in Sources */,
 				E714148821D8AB580016CEDB /* TripModel.swift in Sources */,
 				E78DB14A21EB755200FC4731 /* ActivitiesViewController.swift in Sources */,
 				E78DB14721EB710900FC4731 /* ActivityTypeEnum.swift in Sources */,
 				E73F421B21F2F40F00ECF3BD /* MockData.swift in Sources */,
-				E78DB14F21EB7CD500FC4731 /* ActivityTypeEnum.swift in Sources */,
 				E714147421D89FE80016CEDB /* AppDelegate.swift in Sources */,
 				E74F540D21F3399800483DEF /* ActivityTableViewCell.swift in Sources */,
 				E71414AA21D8E4CB0016CEDB /* PopupUIView.swift in Sources */,
 				E71414A021D8DACB0016CEDB /* UIButtonExtension.swift in Sources */,
 				E714148A21D8AB6A0016CEDB /* TripFunctions.swift in Sources */,
+				E79021B52241390E00D18B63 /* UItableViewEctention.swift in Sources */,
 				E71414A721D8DF370016CEDB /* AddTripViewController.swift in Sources */,
 				E71414AC21D8E6450016CEDB /* AppButton.swift in Sources */,
 				E74F540B21F32C2300483DEF /* HeaderTableViewCell.swift in Sources */,
 				E71414A221D8DC120016CEDB /* FloatingActionButton.swift in Sources */,
 				E714148C21D8AC8C0016CEDB /* Data.swift in Sources */,
 				E714149021D8B0E80016CEDB /* TripsViewController.swift in Sources */,
+				E76AE9CE2242C02300DD45DF /* DateExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,27 +30,64 @@ class ActivitiesViewController: UIViewController {
             self.tableView.reloadData()
         }
         
-        self.sectionHeaderhight = tableView.dequeueReusableCell(withIdentifier: "headerCell")?.contentView.bounds.height ?? 0    }
+        self.sectionHeaderhight = tableView.dequeueReusableCell(withIdentifier: HeaderTableViewCell.identifier)?.contentView.bounds.height ?? 0
+        
+    }
     
     @IBAction func back(_ sender:UIButton){
         //dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true )
     }
+    @IBAction func AddAction(_ sender: UIButton) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let dayAction = UIAlertAction(title: "day", style: .default, handler: hendleAddDay)
+        let activityAction = UIAlertAction(title: "activity", style: .default) { (action) in
+            print("activity")
+        }
+        let cancelAction = UIAlertAction(title: "cancel", style: .cancel)
+        
+        alert.addAction(dayAction)
+        alert.addAction(activityAction)
+        alert.addAction(cancelAction)
+        alert.popoverPresentationController?.sourceView = sender
+        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: sender.bounds.width, height: 0)
+        present(alert, animated: true)
+    }
+    
+    fileprivate func hendleAddDay(action: UIAlertAction){
+        let vc = AddDayViewController.getInstance() as! AddDayViewController
+        let tripIndexToEdit = Data.tripModels.firstIndex(where: { (tripModel) -> Bool in
+            tripModel.id == tripId
+        })
+        vc.tripIndexToEdit = tripIndexToEdit
+        vc.doneSaving = { [weak self] dayModel in
+            guard let self = self else { return }
+            let indexArray = [self.tripModel?.dayModels.count ?? 0]
+            self.tripModel?.dayModels.append(dayModel)
+            self.tableView.insertSections(IndexSet(indexArray), with: UITableView.RowAnimation.automatic)
+            self.tableView.reloadData()
+        }
+        self.present(vc, animated: true)
+    }
 }
 extension ActivitiesViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return sectionHeaderhight
+        return self.sectionHeaderhight
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return  tripModel?.dayModels.count ?? 0
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let daymodel = tripModel?.dayModels[section]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! HeaderTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTableViewCell.identifier) as! HeaderTableViewCell
         cell.setup(model: daymodel!)
+        
         return cell.contentView
     }
+    
+
+        
 //    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
 //        let title = tripModel?.dayModels[section].title ?? ""
 //        let subtitle = tripModel?.dayModels[section].subtitle ?? ""

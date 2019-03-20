@@ -13,15 +13,15 @@ class MockData{
         
         mockTrips.append(TripModel(title: "Trip 1", image: #imageLiteral(resourceName: "Aerial04"), dayModels: createmockDayModeldata()))
         mockTrips.append(TripModel(title: "Trip 2", image: #imageLiteral(resourceName: "backgroundScreen"), dayModels: createmockDayModeldata()))
-        mockTrips.append(TripModel(title: "Trip 3", image: #imageLiteral(resourceName: "Aerial02"), dayModels: createmockDayModeldata()))
+        mockTrips.append(TripModel(title: "Trip 3", image: #imageLiteral(resourceName: "Aerial03"), dayModels: createmockDayModeldata()))
         
         return mockTrips
     }
     static func createmockDayModeldata() -> [DayModel]{
         var dayModel = [DayModel]()
-        dayModel.append(DayModel(title: "createmockDayModeldata 1", subtitle: "createmockDayModeldata  subtittle 1", data: createMockActivityModelData()))
-        dayModel.append(DayModel(title: "createmockDayModeldata 2", subtitle: "createmockDayModeldata  subtittle 2", data: createMockActivityModelData()))
-        dayModel.append(DayModel(title: "createmockDayModeldata 3", subtitle: "createmockDayModeldata  subtittle 3", data: createMockActivityModelData()))
+        dayModel.append(DayModel(title: Date().add(days: 1), subtitle: "createmockDayModeldata  subtittle 1", data: createMockActivityModelData()))
+        dayModel.append(DayModel(title: Date().add(days: 2), subtitle: "createmockDayModeldata  subtittle 2", data: createMockActivityModelData()))
+        dayModel.append(DayModel(title: Date().add(days: 3), subtitle: "createmockDayModeldata  subtittle 3", data: createMockActivityModelData()))
         return dayModel
     }
     
