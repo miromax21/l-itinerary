@@ -16,11 +16,7 @@ class ActivitiesViewController: UIViewController {
     var tripId : UUID!
     var tripModel: TripModel?
     var sectionHeaderhight : CGFloat = 0.0
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.dataSource = self
-        tableView.delegate = self
+    fileprivate func updateTableViewWithTripData() {
         TripFunctions.readTrip(by: tripId) { [weak self] (model) in
             guard let self = self else { return }
             self.tripModel = model
@@ -29,6 +25,14 @@ class ActivitiesViewController: UIViewController {
             self.backgroundImageView.image = model.image
             self.tableView.reloadData()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        updateTableViewWithTripData()
         
         self.sectionHeaderhight = tableView.dequeueReusableCell(withIdentifier: HeaderTableViewCell.identifier)?.contentView.bounds.height ?? 0
         
@@ -62,8 +66,9 @@ class ActivitiesViewController: UIViewController {
         vc.tripIndexToEdit = tripIndexToEdit
         vc.doneSaving = { [weak self] dayModel in
             guard let self = self else { return }
-            let indexArray = [self.tripModel?.dayModels.count ?? 0]
+           // let indexArray = [self.tripModel?.dayModels.count ?? 0]
             self.tripModel?.dayModels.append(dayModel)
+            let indexArray = [self.tripModel?.dayModels.firstIndex(of: dayModel) ?? 0]
             self.tableView.insertSections(IndexSet(indexArray), with: UITableView.RowAnimation.automatic)
             self.tableView.reloadData()
         }

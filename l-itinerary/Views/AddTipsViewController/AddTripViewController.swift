@@ -44,23 +44,7 @@ class AddTripViewController: UIViewController {
     }
     @IBAction func save(_ sender: UIButton) {
         tripTextField.rightViewMode = .never
-        guard tripTextField.text != "", let newTripName = tripTextField.text else {
-//            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
-//            imageView.image = #imageLiteral(resourceName: "alert")
-//            imageView.contentMode = .scaleAspectFit
-//
-//            tripTextField.rightView = imageView
-//
-//            tripTextField.rightViewMode = .always
-//            return
-            tripTextField.layer.borderColor = Theme.tintColor?.cgColor
-            tripTextField.layer.borderWidth = 1
-            tripTextField.layer.cornerRadius = 5
-            
-            tripTextField.placeholder = "Trio name required "
-          //  tripTextField.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
-            return
-        }
+        guard tripTextField.hasValue, let newTripName = tripTextField.text else { return }
         if let index = tripIndexToEdit{
             TripFunctions.updateTrip(index: index, title: newTripName, image: imageView.image)
         } else {

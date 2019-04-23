@@ -11,7 +11,11 @@ struct TripModel {
     var id: UUID
     var title: String!
     var image: UIImage?
-    var dayModels = [DayModel]()
+    var dayModels = [DayModel](){
+        didSet{
+            dayModels = dayModels.sorted(by: < )
+        }
+    }
     
     init(title:String, image: UIImage? = nil, dayModels:[DayModel]? = nil) {
         self.id = UUID()
