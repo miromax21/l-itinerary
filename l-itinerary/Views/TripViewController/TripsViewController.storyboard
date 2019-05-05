@@ -153,7 +153,7 @@
                     <blurEffect style="dark"/>
                 </visualEffectView>
             </objects>
-            <point key="canvasLocation" x="863.20000000000005" y="130.88455772113943"/>
+            <point key="canvasLocation" x="862.5" y="130.6640625"/>
         </scene>
         <!--AddTripsViewController-->
         <scene sceneID="Cwh-RC-VKp">

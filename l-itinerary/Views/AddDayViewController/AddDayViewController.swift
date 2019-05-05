@@ -19,7 +19,7 @@ class AddDayViewController: UIViewController {
 
     var doneSaving : ((DayModel)-> ())?
     var tripIndexToEdit: Int!
-
+    var tripModel: TripModel!
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLable.font = UIFont(name: Theme.mainFontName, size: 26)
@@ -36,11 +36,24 @@ class AddDayViewController: UIViewController {
     @IBAction func save(_ sender: UIButton) {
      //   tittleTextField.rightViewMode = .never
         //guard tittleTextField.hasValue, let newTittle = tittleTextField.text  else { return }
+        if alreadyExists(datePicker.date){
+            let alert = UIAlertController(title: "Day alert", message: "chouse another date", preferredStyle:   .alert)
+            let okAction = UIAlertAction(title: "OK", style: .cancel)
+            alert.addAction(okAction)
+            present(alert, animated: true)
+            return
+        }
         let dayModel = DayModel(title: datePicker.date, subtitle: subtittleTextField.text ?? "", data: nil)
         DayFunctions.createDays(at: tripIndexToEdit, using: dayModel)
         if let doneSaving = doneSaving{
             doneSaving(dayModel)
         }
         dismiss(animated: true)
+    }
+    func alreadyExists(_ date:Date)-> Bool{
+        if tripModel.dayModels.contains(where: {$0.title.mediumDate() == date.mediumDate()}){
+            return true
+        }
+        return false
     }
 }

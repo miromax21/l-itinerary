@@ -60,6 +60,7 @@ class ActivitiesViewController: UIViewController {
     
     fileprivate func hendleAddDay(action: UIAlertAction){
         let vc = AddDayViewController.getInstance() as! AddDayViewController
+        vc.tripModel = tripModel
         let tripIndexToEdit = Data.tripModels.firstIndex(where: { (tripModel) -> Bool in
             tripModel.id == tripId
         })
